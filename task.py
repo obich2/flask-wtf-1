@@ -3,9 +3,10 @@ from flask import Flask, url_for, render_template
 app = Flask(__name__)
 
 
-@app.route('/<title>')
-def index(title):
-    return render_template('base.html', title=title)
+@app.route('/distribution')
+def index():
+    return render_template('base.html', crew_members=['Ридли Скотт', 'Энди Уир', 'Марк Уотни', 'Венката Капур',
+                                                      "Тедди Сандерс", "Шон Бин"])
 
 
 if __name__ == '__main__':
