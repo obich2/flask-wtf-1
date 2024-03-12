@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 
 @app.route('/answer')
+@app.route('/auto_answer')
 def answer():
     answer_dict = {
         'title': 'Анкета',
@@ -16,6 +17,8 @@ def answer():
         'ready': True
     }
     return render_template('index.html', **answer_dict)
+
+
 
 
 if __name__ == '__main__':
